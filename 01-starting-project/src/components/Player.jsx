@@ -4,6 +4,7 @@ const [enteredPlayerName , setEnteredPlayerName] = useState('')
 const [submitted, setsetsubmitted] = useState(false)
 
  function handleChange (event){
+         setsetsubmitted(false)
         setEnteredPlayerName(event.target.value);
  }
  
