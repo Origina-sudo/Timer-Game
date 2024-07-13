@@ -1,6 +1,6 @@
 import { useState } from "react";
 export default function Player() {
-const [enteredPlayerName , setEnteredPlayerName] = useState('')
+const [enteredPlayerName , setEnteredPlayerName] = useState(null)
 const [submitted, setsetsubmitted] = useState(false)
 
  function handleChange (event){
