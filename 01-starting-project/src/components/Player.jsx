@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState,useRef } from "react";
 export default function Player() {
 const [enteredPlayerName , setEnteredPlayerName] = useState(null)
 const [submitted, setsetsubmitted] = useState(false)
