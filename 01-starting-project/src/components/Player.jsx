@@ -1,8 +1,7 @@
 import { useState,useRef } from "react";
 export default function Player() {
-  const playeName = useRef(second)
+  const playeName = useRef()
 const [enteredPlayerName , setEnteredPlayerName] = useState(null)
-const [submitted, setsetsubmitted] = useState(false)
 
  function handleChange (event){
          setsetsubmitted(false)
@@ -10,16 +9,14 @@ const [submitted, setsetsubmitted] = useState(false)
  }
  
  function handleClick (){
-    setsetsubmitted(true)
+       setEnteredPlayerName(playeName.current.value);
  }
   return ( 
     <section id="player">
-      <h2>Welcome {submitted ? enteredPlayerName :  'unknown entity'}</h2>
+      <h2>Welcome {enteredPlayerName ? enteredPlayerName :  'unknown entity'}</h2>
       <p>
         <input ref={playeName} 
-        type="text" 
-        onChange={handleChange} 
-        value={enteredPlayerName} />
+        type="text"  />
         <button onClick={handleClick}>Set Name</button>
       </p>
     </section>
