@@ -9,8 +9,11 @@ const TimerChallenge = ({title,targetTime}) => {
         </p>
         <p>
             <button>
-                
+                Start Challenge
             </button>
+        </p>
+        <p className="">
+            Time is running..../ Timer inactive
         </p>
     </section>
   )
