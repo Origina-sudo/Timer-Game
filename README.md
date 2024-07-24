@@ -61,67 +61,39 @@ A dynamic single-page timer game built with React, designed to test your ability
 
 ### Components
 
-- **App.js**: The main component that holds the game logic.
-- **Timer.js**: A component responsible for the timer functionality.
+- **App.jsx**: The main component that holds the game logic.
+- **Ti.js**: A component responsible for the timer functionality.
 - **PlayerInput.js**: A component for entering the player's name.
 - **Modal.js**: A reusable modal component rendered using React portals.
 
 ### Key Concepts
 
-- **React Refs**: Used to directly access and manipulate DOM elements, such as the timer.
+- **React Refs & forwardRefs**: Used to directly access and manipulate DOM elements, such as the timer.
 - **React Portals**: Enable rendering of components outside the main DOM hierarchy, useful for modals and overlays.
 
 ### Example Code Snippet
 
 ```jsx
-// Example usage of React refs and portals
+import { useState,useRef } from "react";
+export default function Player() {
+const playeName = useRef()
+const [enteredPlayerName , setEnteredPlayerName] = useState(null)
 
-import React, { useRef, useState } from 'react';
-import ReactDOM from 'react-dom';
-
-const Timer = () => {
-  const timerRef = useRef(null);
-  const [time, setTime] = useState(10);
-
-  const startTimer = () => {
-    timerRef.current = setInterval(() => {
-      setTime(prevTime => prevTime - 1);
-    }, 1000);
-  };
-
-  const stopTimer = () => {
-    clearInterval(timerRef.current);
-  };
-
-  return (
-    <div>
-      <p>Time left: {time}</p>
-      <button onClick={startTimer}>Start</button>
-      <button onClick={stopTimer}>Stop</button>
-    </div>
+ function handleClick (){
+       setEnteredPlayerName(playeName.current.value);
+       playeName.current.value = "";
+ }
+  return ( 
+    <section id="player">
+      <h2>Welcome {enteredPlayerName ? enteredPlayerName : 'unknown entity'}</h2>
+      <p>
+        <input ref={playeName} 
+        type="text"  />
+        <button onClick={handleClick}>Set Name</button>
+      </p>
+    </section>
   );
-};
 
-const Modal = ({ children }) => {
-  return ReactDOM.createPortal(
-    <div className="modal">
-      {children}
-    </div>,
-    document.getElementById('modal-root')
-  );
-};
-
-const App = () => {
-  return (
-    <div>
-      <h1>Timer Game</h1>
-      <PlayerInput />
-      <Timer />
-      <Modal>
-        <p>This is a modal rendered using React portals!</p>
-      </Modal>
-    </div>
-  );
-};
+}
 
 export default App;
