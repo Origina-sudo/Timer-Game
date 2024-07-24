@@ -18,5 +18,5 @@ const TimerChallenge = ({title,targetTime}) => {
     </section>
   )
 }
-
+ 
 export default TimerChallenge
