@@ -37,7 +37,7 @@ A dynamic single-page timer game built with React, designed to test your ability
 
 3. Install the dependencies:
     ```bash
-    npm install or npm run dev
+    npm install 
     # or
     yarn install
     ```
@@ -46,7 +46,7 @@ A dynamic single-page timer game built with React, designed to test your ability
 
 1. Start the development server:
     ```bash
-    npm start
+    npm start or npm run dev
     # or
     yarn start
     ```
