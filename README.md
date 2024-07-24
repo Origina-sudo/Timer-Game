@@ -11,7 +11,9 @@ A dynamic single-page timer game built with React, designed to test your ability
 - **Mobile Responsive**: Fully responsive design to ensure a seamless experience across different devices.
 
 ## Demo
+# My Awesome Game
 
+![Screenshot of my game](https://github.com/Origina-sudo/Timer-Game/blob/main/Screenshot%202024-07-24%20183007.png)
 
 
 ## Getting Started
@@ -25,7 +27,7 @@ A dynamic single-page timer game built with React, designed to test your ability
 
 1. Clone the repository:
     ```bash
-    git clone [https://github.com/Origina-sudo/timer-game.git](https://github.com/Origina-sudo/Timer-Game.git)
+    git clone https://github.com/Origina-sudo/Timer-Game.git
     ```
 
 2. Navigate to the project directory:
