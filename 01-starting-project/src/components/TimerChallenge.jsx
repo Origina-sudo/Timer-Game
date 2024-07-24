@@ -1,6 +1,14 @@
+import { useState } from "react"
 
 
 const TimerChallenge = ({title,targetTime}) => {
+  const [timerExpired, settimerExpired] = useState(false) 
+  function handleStart() {
+    setTimeout(()=>{
+      settimerExpired(true);
+    },targetTime * 1000)
+   }
+  
   return (
     <section className="challenge">
         <h2>{title}</h2>
