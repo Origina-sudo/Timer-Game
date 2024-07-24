@@ -22,7 +22,7 @@ const TimerChallenge = ({title,targetTime}) => {
   
   return (
     <>  
-      {timerExpired && <ResultModal ref ={dialog} targetTime={targetTime} result="Lost"/>}
+      <ResultModal ref ={dialog} targetTime={targetTime} result="Lost"/>
       <section className="challenge">
         <h2>{title}</h2>
 
