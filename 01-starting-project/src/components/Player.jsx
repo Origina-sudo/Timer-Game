@@ -17,4 +17,4 @@ const [enteredPlayerName , setEnteredPlayerName] = useState(null)
       </p>
     </section>
   );
-}
+
