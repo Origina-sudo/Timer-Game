@@ -9,7 +9,7 @@ const [enteredPlayerName , setEnteredPlayerName] = useState(null)
  }
   return ( 
     <section id="player">
-      <h2>Welcome {enteredPlayerName ?? 'unknown entity'}</h2>
+      <h2>Welcome {enteredPlayerName ? enteredPlayerName : 'unknown entity'}</h2>
       <p>
         <input ref={playeName} 
         type="text"  />
@@ -18,3 +18,4 @@ const [enteredPlayerName , setEnteredPlayerName] = useState(null)
     </section>
   );
 
+}
