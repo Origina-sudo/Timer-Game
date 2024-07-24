@@ -30,7 +30,7 @@ A dynamic single-page timer game built with React, designed to test your ability
 
 2. Navigate to the project directory:
     ```bash
-    cd timer-game
+    cd 01-starting-project
     ```
 
 3. Install the dependencies:
@@ -62,9 +62,8 @@ A dynamic single-page timer game built with React, designed to test your ability
 ### Components
 
 - **App.jsx**: The main component that holds the game logic.
-- **Ti.js**: A component responsible for the timer functionality.
 - **Player.jsx**: A component for entering the player's name.
-- **Modal.js**: A reusable modal component rendered using React portals.
+- **ResultModal.jsx**: A reusable modal component rendered using React portals.
 
 ### Key Concepts
 
