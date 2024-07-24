@@ -63,7 +63,7 @@ A dynamic single-page timer game built with React, designed to test your ability
 
 - **App.jsx**: The main component that holds the game logic.
 - **Ti.js**: A component responsible for the timer functionality.
-- **PlayerInput.js**: A component for entering the player's name.
+- **Player.jsx**: A component for entering the player's name.
 - **Modal.js**: A reusable modal component rendered using React portals.
 
 ### Key Concepts
