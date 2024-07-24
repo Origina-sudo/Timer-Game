@@ -4,6 +4,7 @@ A dynamic single-page timer game built with React, designed to test your ability
 
 ## Features
 
+
 - **Dynamic Timer**: Test your reflexes by stopping the timer before it hits zero.
 - **Player Name Input**: Enter your name to personalize the game experience.
 - **React Refs**: Utilized to manage timer control and user input.
@@ -11,7 +12,6 @@ A dynamic single-page timer game built with React, designed to test your ability
 - **Mobile Responsive**: Fully responsive design to ensure a seamless experience across different devices.
 
 ## Demo
-# My Awesome Game
 
 ![Screenshot of my game](https://github.com/Origina-sudo/Timer-Game/blob/main/Screenshot%202024-07-24%20183007.png)
 
@@ -37,7 +37,7 @@ A dynamic single-page timer game built with React, designed to test your ability
 
 3. Install the dependencies:
     ```bash
-    npm install
+    npm install or npm run dev
     # or
     yarn install
     ```
