@@ -24,7 +24,7 @@ const TimerChallenge = ({title,targetTime}) => {
         <p className="">
             Time is running..../ Timer inactive
         </p>
-    </section>
+    </section
   )
 }
  
