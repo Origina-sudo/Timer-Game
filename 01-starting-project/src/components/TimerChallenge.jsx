@@ -1,10 +1,10 @@
 import { useState } from "react"
-
+let timer;
 
 const TimerChallenge = ({title,targetTime}) => {
   const [timerStarted, settimerStarted] = useState(false)
   const [timerExpired, settimerExpired] = useState(false) 
-  let timer;
+
   function handleStart() {
    settimerStarted(true);
     timer =setTimeout(()=>{
