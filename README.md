@@ -12,7 +12,7 @@ A dynamic single-page timer game built with React, designed to test your ability
 
 ## Demo
 
-[Include a screenshot or GIF of your game here]
+
 
 ## Getting Started
 
@@ -25,7 +25,7 @@ A dynamic single-page timer game built with React, designed to test your ability
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/Origina-sudo/timer-game.git
+    git clone [https://github.com/Origina-sudo/timer-game.git](https://github.com/Origina-sudo/Timer-Game.git)
     ```
 
 2. Navigate to the project directory:
