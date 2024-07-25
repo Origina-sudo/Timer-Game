@@ -23,6 +23,12 @@ const TimerChallenge = ({title,targetTime}) => {
     settimeRemaining(targetTime * 1000);
   }
 
+  function hnadleStart(){
+    timer.current=setInterval(() => {
+      settimeRemaining((previousTimeRemaining)=>previousTimeRemaining - 10 );
+    }, 10);
+  }
+
    function handleStop() {
     clearInterval(timer.current);
     dialog.current.open();
