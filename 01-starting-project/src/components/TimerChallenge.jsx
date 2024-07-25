@@ -14,8 +14,14 @@ const TimerChallenge = ({title,targetTime}) => {
     },10); 
    }
 
+   if (timeRemaining <= 0){
+        clearInterval(timer.current);
+        settimeRemaining(targetTime * 1000);
+        dialog.current.open();
+   }
    function handleStop() {
-          clearTimeout(timer.current);
+    dialog.current.open();
+          clearInterval(timer.current);
    }
   
   return (
@@ -28,12 +34,12 @@ const TimerChallenge = ({title,targetTime}) => {
          {targetTime} second{targetTime > 1 ? "s" :""}
         </p>
         <p>
-            <button onClick={timerStarted ? handleStop : handleStart}>
-                {timerStarted ? "Stop" : "Start"} Challenge
+            <button onClick={timerisActive ? handleStop : handleStart}>
+                {timerisActive ? "Stop" : "Start"} Challenge
             </button>
         </p>
-        <p className={timerStarted ? "active" : undefined}>
-            {timerStarted ? "Time is Running..." : "Timer Inactive"}
+        <p className={timerisActive ? "active" : undefined}>
+            {timerisActive ? "Time is Running..." : "Timer Inactive"}
         </p>
     </section>
     </>
