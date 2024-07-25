@@ -5,7 +5,7 @@ const ResultModal = forwardRef(function ResultModal({result,targetTime,remaining
   const dialog = useRef();
 
   const userLost = remainingTime <= 0;
-const formattedRemainingTime = (remainingTime / 1000).toFixed(2)
+  const formattedRemainingTime = (remainingTime / 1000).toFixed(2);
 
     useImperativeHandle(ref, ()=>{
     return{
