@@ -18,8 +18,9 @@ const formattedRemainingTime = (remainingTime / 1000).toFixed(2)
     return (
     <dialog ref={dialog} className='result-modal'>
         {userLost && <h2>You Lost</h2>}
-        <p>The Target Time was <strong>{targetTime} seconds.</strong></p>
-        <p>You stopped the Timer with <strong>{formattedRemainingTime}</strong></p>
+        <p>The Target Time was <strong>{targetTime} seconds left.</strong></p>
+        <p>You stopped the Timer {' '} 
+            <strong>{formattedRemainingTime}</strong></p>
         <form method='dialog' onSubmit={onReset}>
             <button>Close</button>
         </form>
