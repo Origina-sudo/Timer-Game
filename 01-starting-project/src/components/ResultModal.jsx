@@ -2,13 +2,13 @@ import React from 'react'
 import { forwardRef,useImperativeHandle,useRef } from 'react';
 
 const ResultModal = forwardRef(function ResultModal({result,targetTime},ref){
-  useRef();
+  const dialog = useRef();
     useImperativeHandle(ref, ()=>{
     return{
         open(){
-            
+          dialog.current.showModal();  
         }
-    }
+    };
   });
   
     return (
