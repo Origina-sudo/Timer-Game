@@ -22,5 +22,4 @@ const ResultModal = forwardRef(function ResultModal({result,targetTime},ref){
     </dialog>
   );
 })
-
 export default ResultModal;
