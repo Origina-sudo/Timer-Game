@@ -1,7 +1,9 @@
 import React from 'react'
 import { forwardRef,useImperativeHandle,useRef } from 'react';
 
-const ResultModal = forwardRef(function ResultModal({result,targetTime,remainingTime,onReset},ref){
+const ResultModal = forwardRef(function ResultModal(
+    {targetTime,remainingTime,onReset},
+    ref){
   const dialog = useRef();
 
   const userLost = remainingTime <= 0;
