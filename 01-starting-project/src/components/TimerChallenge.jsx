@@ -20,12 +20,12 @@ const TimerChallenge = ({title,targetTime}) => {
    }
 
   function handleReset(){
-    settimeRemaining(targetTime * 1000);
+    setTimeRemaining(targetTime * 1000);
   }
 
   function hnadleStart(){
     timer.current=setInterval(() => {
-      settimeRemaining((previousTimeRemaining)=>previousTimeRemaining - 10 );
+      setTimeRemaining((previousTimeRemaining)=>previousTimeRemaining - 10 );
     }, 10);
   }
 
@@ -37,20 +37,27 @@ const TimerChallenge = ({title,targetTime}) => {
   
   return (
     <>  
-      <ResultModal ref ={dialog} targetTime={targetTime} remainingTime ={timeRemaining} onReset={handleReset}/>
+      <ResultModal ref ={dialog} 
+      targetTime={targetTime}
+       remainingTime={timeRemaining} 
+       onReset={handleReset}/>
       <section className="challenge">
         <h2>{title}</h2>
 
         <p className="challenge-time">
-         {targetTime} second{targetTime > 1 ? "s" :""}
+         {targetTime} second{targetTime >
+          1 ? "s" :""}
         </p>
         <p>
-            <button onClick={timerisActive ? handleStop : handleStart}>
+            <button onClick={timerisActive ? 
+              handleStop : handleStart}>
                 {timerisActive ? "Stop" : "Start"} Challenge
             </button>
         </p>
-        <p className={timerisActive ? "active" : undefined}>
-            {timerisActive ? "Time is Running..." : "Timer Inactive"}
+        <p className={timerisActive ?
+           "active" : undefined}>
+            {timerisActive ? 
+            "Time is Running..." : "Timer Inactive"}
         </p>
     </section>
     </>
