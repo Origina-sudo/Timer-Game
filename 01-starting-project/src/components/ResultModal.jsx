@@ -22,7 +22,7 @@ const ResultModal = forwardRef(function ResultModal({result,targetTime,remaining
         <p>You stopped the Timer {' '} 
             <strong>{formattedRemainingTime}</strong></p>
         <form method='dialog' onSubmit={onReset}>
-            <button>Close Button</button>
+            <button>Close</button>
         </form>
     </dialog>
   );
