@@ -7,7 +7,7 @@ const TimerChallenge = ({ title, targetTime }) => {
   const [timeRemaining, setTimeRemaining] = useState(targetTime * 1000);
   const [timerIsActive, setTimerIsActive] = useState(false);
 
-  // Use effect to handle the timer updates
+  // -Use effect to handle the timer updates
   useEffect(() => {
     if (timerIsActive && timeRemaining > 0) {
       timer.current = setInterval(() => {
